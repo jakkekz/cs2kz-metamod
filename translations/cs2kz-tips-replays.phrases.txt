@@ -42,29 +42,34 @@
 		"en"		"{grey}Type {default}!rploadprogress {grey}to check the loading progress of a replay."
 		"chi"		"{grey}在聊天框中输入 {default}!rploadprogress {grey}检查回放的加载进度."
 		"ua"		"{grey}Напишіть {default}!rploadprogress {grey}, щоб перевірити прогрес завантаження повтору."
+		"sv"		"{grey}Type {default}!rploadprogress {grey}to check the loading progress of a replay."
 	}
 	"Tip - kz_rpcancelload"
 	{
 		"en"		"{grey}Type {default}!rpcancelload {grey}to cancel loading a replay."
 		"chi"		"{grey}在聊天框中输入 {default}!rpcancelload {grey}来取消加载回放."
 		"ua"		"{grey}Напишіть {default}!rpcancelload {grey}, щоб скасувати завантаження повторy."
+		"sv"		"{grey}Skriv {default}!rpcancelload {grey}för att sluta laddnigen av återsuppspelning."
 	}
 	"Tip - kz_rpseek"
 	{
 		"en"		"{grey}Type {default}!rpseek <+/-time> {grey}to relatively seek to a time in the replay."
 		"chi"		"{grey}在聊天框中输入 {default}!rpseek <+/-time> {grey}在回放中相对地寻找某个时间点."
 		"ua"		"{grey}Напишіть {default}!rpseek <+/-час> {grey}, щоб приблизно перейти до певного моменту в повторі."
+		"sv"		"{grey}Skriv {default}!rpseek <+/-tid> {grey}för att relativt söka en tidpunkt i återuppspelningen."
 	}
 	"Tip - kz_rpsave"
 	{
 		"en"		"{grey}Type {default}!rpsave <seconds> {grey}to save a manual replay of up to the specified duration."
 		"chi"		"{grey}在聊天框中输入 {default}!rpsave <seconds> {grey}以手动保存一段指定具体时长的回放."
 		"ua"		"{grey}Напишіть {default}!rpsave <секунди> {grey}, щоб вручну зберегти повтор тривалістю до вказаної кількості секунд."
+		"sv"		"{grey}Skriv {default}!rpsave <sekunder> {grey}för att manuellt spara en återuppspelning upp till den angivna tidpunkten."
 	}
     "Tip - Replay Storage Policy"
     {
 	    "en"        "{grey}Older or less important replays may be automatically removed over time to free up server space. Saving new manual replays can overwrite previous ones."
 	    "chi"        "{grey}较旧或不太重要的回放可能会随着时间的推移被自动删除以释放服务器空间. 手动保存新的回放会覆盖之前的回放."
 	    "ua"        "{grey}Старі або менш важливі повтори можуть бути автоматично видалені з часом, щоб звільнити місце на сервері. Збереження нових повторів вручну може перезаписати попередні."
+	    "sv"        "{grey}Äldre eller mindre viktiga återuppspelningar kan tas bort automatiskt med tiden för att frigöra serverutrymme. Att spara nya manuella uppspelningar kan skriva över tidigare."
     }
 }
