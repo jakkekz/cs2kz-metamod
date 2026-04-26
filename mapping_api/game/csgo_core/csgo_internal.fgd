@@ -108,3 +108,48 @@
 [
 	timer_zone_course_descriptor(target_destination) : "KZ | Course Descriptor" : : "info_target_server_only entity that describes which course this teleport destination is connected to."
 ]
+
+	// map_preview_camera_path
+@PathClass base(map_preview_camera_path, point_camera_vertical_fov) = team_select_camera
+[
+	variant(integer): "Variant"
+	rendercolor(remove_key)
+]
+
+	// map_preview_camera_path CT model
+@PointClass base(RenderFields) studio("characters/models/ctm_sas/ctm_sas.vmdl") = team_select_counterterrorist : "A model entity that can be used for characters in ui maps."
+[
+    variant(integer): "Variant"
+	ordinal(integer): "Ordinal"
+    weapon(string): "Classname of item to equip. Should be corresponding to ordinal:\n1 - weapon_awp\n2 - weapon_m4a1\n3 - weapon_knife\n4 - weapon_mp7\n5 - weapon_deagle\n6 - weapon_knife\n7 - weapon_m4a1_silencer\n8 - weapon_elite\n9 - weapon_negev\n10 - weapon_mp7"
+    team_preview_variant(integer): "Team preview variant" : "1"
+	
+	team_preview_position(animgraph_enum)  { enabled={ function="ModelHasAnimGraph" } } : "Team preview position" : "" : "For Character Mode team_select and team_intro. Overridden in game."
+	animgraph(animgraph) { enabled={ function="ModelHasAnimGraph" } } : "Animgraph" : "characters/models/shared/animgraphs/ui_player_ct.vanmgrph" : "Specify animgraph resource.  Overridden if the model is changed by game code."
+	character_mode(animgraph_enum)  { enabled={ function="ModelHasAnimGraph" } } : "Character Mode" : "team-select" : "UI Character animation mode.  Set by game code."
+	CT_true(animgraph_enum)  { enabled={ function="ModelHasAnimGraph" } } : "Counter Terrorist" : "true" : "True CT, false for terrorist.  This value is overridden in game to match the model."
+]
+
+	// map_preview_camera_path T model
+@PointClass base(RenderFields) studio("characters/models/tm_phoenix/tm_phoenix.vmdl") = team_select_terrorist : "A model entity that can be used for characters in ui maps."
+[
+    variant(integer): "Variant"
+	ordinal(integer): "Ordinal"
+    weapon(string): "Classname of item to equip. Should be corresponding to ordinal:\n1 - weapon_knife\n2 - weapon_awp\n3 - weapon_ak47\n4 - weapon_xm1014\n5 - weapon_deagle\n6 - weapon_knife\n7 - weapon_elite\n8 - weapon_deagle\n9 - weapon_ak47\n10 - weapon_xm1014"
+    team_preview_variant(string): "Team preview variant" : "1"
+	
+	team_preview_position(animgraph_enum)  { enabled={ function="ModelHasAnimGraph" } } : "Team preview position" : "" : "For Character Mode team_select and team_intro. Overridden in game."
+	animgraph(animgraph) { enabled={ function="ModelHasAnimGraph" } } : "Animgraph" : "characters/models/shared/animgraphs/ui_player_t.vanmgrph" : "Specify animgraph resource.  Overridden if the model is changed by game code."
+	character_mode(animgraph_enum)  { enabled={ function="ModelHasAnimGraph" } } : "Character Mode" : "team-select" : "UI Character animation mode.  Set by game code."
+	CT_true(animgraph_enum)  { enabled={ function="ModelHasAnimGraph" } } : "Counter Terrorist" : "false" : "True CT, false for terrorist.  This value is overridden in game to match the model."
+]
+
+	// point_prefab
+@PointClass base(Targetname) editormodel("models/editor/info_target", nobounds ) = point_prefab : "An entity used to place prefabs in the world." 
+[
+    targetMapName(string) : "Map Name"
+    forceWorldGroupID(string) : "WorldGroupID"
+    fixupNames(boolean) : "Fixup Entity Names" : 0
+    prefab_load_dynamic(boolean) : "Load Dynamically" : 1
+    prefab_associated_relay(string) : "Associated Relay"
+]
